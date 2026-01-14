@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+/*  Discounted Selling price is to be calculated if original selling price and discount percentage
+is given. Write a program to calculate and print discounted selling price of the user given
+two inputs (1) original selling price and (2) discounted selling price. */
+
+ 
+public class Fourthassignmentdiscount{
+    public static void main(String[]args){
+
+        float OSP; //Original Selling Price
+        float DSPer; //Discounted Selling Price
+
+        Scanner read = new Scanner(System.in);
+
+        System.out.print("Enter Original Price: ");
+        OSP = read.nextFloat();
+
+        
+
+        while(OSP <= 0){
+            System.out.print("Enter positive value for Original Price: ");
+            OSP = read.nextFloat();
+
+        }
+
+        System.out.print("Enter Discounted Percentage: ");
+        DSPer = read.nextFloat();
+        
+        Float DSP = ( OSP - (DSPer / 100 ) * OSP );
+
+        System.out.println("The Discounted Selling Price is : " + DSP );
+        
+
+
+    }
+}
